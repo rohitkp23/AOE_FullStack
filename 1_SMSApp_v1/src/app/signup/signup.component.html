@@ -1,0 +1,39 @@
+<mat-card class="signup-card">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form (ngSubmit)="performsignup()">
+        <mat-form-field appearance="outline" class="full-width-field">
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Enter your username"
+            name="username"
+            [(ngModel)]="username"
+            required
+          />
+          <mat-hint>6 characters minimum</mat-hint>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width-field">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            [(ngModel)]="password"
+            required
+          />
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" class="full-width-btn" type="submit">Sign Up</button>
+  
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> <!-- Displaying error message -->
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

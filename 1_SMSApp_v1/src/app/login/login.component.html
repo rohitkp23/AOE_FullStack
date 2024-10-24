@@ -1,0 +1,25 @@
+<div style="max-width: 400px; margin: auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; background-color: #fafafa;">
+    <h2 style="text-align: center;">LOGIN</h2>
+    
+    <form (ngSubmit)="performlogin()" style="max-width: 400px; margin: auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; background-color: #fafafa;">
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" placeholder="Username" name="username" [(ngModel)]="username" required>
+    </mat-form-field>
+    
+    <br><br>
+  
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+    </mat-form-field>
+    
+    <br><br>
+  
+    <div style="text-align: center;">
+      <button mat-raised-button color="primary" type="submit" style="width: 100%; padding: 10px; font-size: 16px;">Login</button>
+    </div>
+  </form>
+  
+  <p style="text-align: center; color: #f44336;">{{message}}</p>
+  
